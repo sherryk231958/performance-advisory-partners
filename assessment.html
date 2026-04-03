@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take the free AI Readiness Assessment from SK² AI Solutions. Discover where your organization stands and get a clear path forward for strategic AI adoption.">
+    <meta property="og:title" content="AI Readiness Assessment | SK² AI Solutions, LLC">
+    <meta property="og:description" content="Evaluate your organization's AI readiness. Get actionable insights and a clear roadmap for strategic AI adoption.">
+    <meta property="og:type" content="website">
+    <title>AI Readiness Assessment | SK² AI Solutions, LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        /* GHL Embed Fix - Only target GHL wrapper elements */
+        :host, :root, html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: 100vw !important;
+            width: 100% !important;
+            overflow-x: hidden;
+        }
+        /* Target GHL-specific wrapper classes */
+        [class*="hl-"], [class*="c-wrapper"], [class*="c-container"],
+        [id*="preview"], [class*="preview"] {
+            max-width: 100vw !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        /* Ensure page containers have proper padding */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        :root {
+            /* Light theme colors */
+            --white: #FFFFFF;
+            --gray-50: #fafafa;
+            --gray-100: #f4f4f5;
+            --gray-200: #e4e4e7;
+            --gray-300: #d4d4d8;
+            --gray-400: #a1a1aa;
+            --gray-500: #71717a;
+            --gray-600: #52525b;
+            --gray-700: #3f3f46;
+            --gray-800: #27272a;
+            --gray-900: #18181b;
+
+            /* Accent colors - Purple/Pink/Violet spectrum */
+            --violet-50: #f5f3ff;
+            --violet-100: #ede9fe;
+            --violet-200: #ddd6fe;
+            --violet-300: #c4b5fd;
+            --violet-400: #a78bfa;
+            --violet-500: #8b5cf6;
+            --violet-600: #7c3aed;
+            --violet-700: #6d28d9;
+
+            --purple-400: #c084fc;
+            --purple-500: #a855f7;
+            --purple-600: #9333ea;
+
+            --pink-300: #f9a8d4;
+            --pink-400: #f472b6;
+            --pink-500: #ec4899;
+            --pink-600: #db2777;
+
+            --fuchsia-400: #e879f9;
+            --fuchsia-500: #d946ef;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #ec4899 100%);
+            --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+            --gradient-soft: linear-gradient(135deg, #f5f3ff 0%, #fdf2f8 50%, #faf5ff 100%);
+            --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+            --gradient-hero: linear-gradient(180deg, #faf5ff 0%, #fdf2f8 50%, #f5f3ff 100%);
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 20px rgba(139, 92, 246, 0.1);
+            --shadow-lg: 0 10px 40px rgba(139, 92, 246, 0.15);
+            --shadow-xl: 0 20px 60px rgba(139, 92, 246, 0.2);
+            --shadow-glow: 0 0 40px rgba(217, 70, 239, 0.2);
+
+            /* Glassmorphism */
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.8);
+            --glass-blur: blur(20px);
+
+            /* Radius */
+            --radius: 12px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 100px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background: var(--gradient-hero);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        .hero-h1 {
+            font-weight: 800;
+            font-size: clamp(36px, 5vw, 56px);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .section-h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: var(--violet-600);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .text-center { text-align: center; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border-radius: var(--radius-full);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(217, 70, 239, 0.5);
+            color: var(--white);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--violet-600);
+            border: 2px solid var(--violet-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--violet-400);
+            background: var(--violet-50);
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            padding: 20px 48px;
+            font-size: 15px;
+        }
+
+        /* Logo */
+        .logo-header {
+            text-align: center;
+            padding: 32px 24px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--gray-800);
+            display: inline-flex;
+            align-items: baseline;
+            gap: 2px;
+        }
+
+        .logo sup {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 14px;
+        }
+
+        .logo span {
+            font-weight: 500;
+            margin-left: 6px;
+            color: var(--gray-600);
+        }
+
+        /* Hero / Landing Section */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative elements */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(217, 70, 239, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray-600);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .hero-feature svg {
+            width: 22px;
+            height: 22px;
+            stroke: url(#iconGradient);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-soft);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--violet-500);
+        }
+
+        /* Email Form */
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .email-form label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .email-form input[type="email"],
+        .email-form input[type="text"] {
+            width: 100%;
+            padding: 18px 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-full);
+            background: var(--white);
+            color: var(--gray-800);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-form input[type="email"]:focus,
+        .email-form input[type="text"]:focus {
+            border-color: var(--violet-400);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+        }
+
+        .email-form input::placeholder {
+            color: var(--gray-400);
+        }
+
+        .form-note {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        /* Assessment Container */
+        .assessment-container {
+            min-height: 100vh;
+            padding: 40px 24px 60px;
+            display: none;
+        }
+
+        .assessment-container.active {
+            display: block;
+        }
+
+        .assessment-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .assessment-logo {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .assessment-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin-bottom: 40px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .progress-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .progress-count {
+            font-size: 14px;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        /* Question */
+        .question-container {
+            min-height: 320px;
+        }
+
+        .dimension-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--gradient-soft);
+            border: 1px solid var(--violet-200);
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--violet-600);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .question-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        /* Answer Options */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 20px 24px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-btn:hover {
+            border-color: var(--violet-300);
+            background: var(--violet-50);
+            transform: translateX(4px);
+        }
+
+        .option-btn.selected {
+            background: var(--gradient-soft);
+            border-color: var(--violet-400);
+            color: var(--violet-700);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Navigation Buttons */
+        .question-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--gray-500);
+            border: none;
+            padding: 12px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back:hover {
+            color: var(--violet-600);
+        }
+
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Results Section */
+        .results-container {
+            min-height: 100vh;
+            padding: 40px 24px 80px;
+            display: none;
+        }
+
+        .results-container.active {
+            display: block;
+        }
+
+        .results-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .results-logo {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .overall-score {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 4px solid transparent;
+            background-image: linear-gradient(white, white), var(--gradient-primary);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            position: relative;
+        }
+
+        .overall-score::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .overall-score .score-value {
+            font-size: 64px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .overall-score .score-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .results-summary {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 550px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Dimension Scores */
+        .dimension-scores {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .dimension-scores h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .dimension-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .dimension-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .dimension-name {
+            width: 120px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            flex-shrink: 0;
+        }
+
+        .dimension-bar {
+            flex: 1;
+            height: 14px;
+            background: var(--gray-200);
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .dimension-fill {
+            height: 100%;
+            border-radius: 7px;
+            transition: width 1s ease;
+        }
+
+        .dimension-fill.strategy { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .dimension-fill.data { background: linear-gradient(90deg, #d946ef, #e879f9); }
+        .dimension-fill.infrastructure { background: linear-gradient(90deg, #ec4899, #f472b6); }
+        .dimension-fill.people { background: linear-gradient(90deg, #a855f7, #c084fc); }
+        .dimension-fill.governance { background: linear-gradient(90deg, #7c3aed, #8b5cf6); }
+
+        .dimension-percent {
+            width: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: right;
+        }
+
+        /* Readiness Level */
+        .readiness-level {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            margin-bottom: 32px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .readiness-level h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .readiness-title {
+            font-size: 32px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .readiness-desc {
+            color: var(--gray-600);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* CTA Section */
+        .results-cta {
+            text-align: center;
+            padding: 56px 48px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .results-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .results-cta h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .results-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+
+        .btn-cta {
+            background: var(--white);
+            color: var(--violet-600);
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            color: var(--violet-700);
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 24px 60px;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .form-card {
+                padding: 32px 24px;
+            }
+
+            .assessment-card {
+                padding: 32px 24px;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .dimension-row {
+                flex-wrap: wrap;
+            }
+
+            .dimension-name {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            .dimension-scores,
+            .readiness-level {
+                padding: 32px 24px;
+            }
+
+            .results-cta {
+                padding: 40px 24px;
+            }
+
+            .results-cta h3 {
+                font-size: 24px;
+            }
+
+            .btn-large {
+                padding: 18px 32px;
+                font-size: 14px;
+            }
+        }
+
+        /* Hide sections */
+        .hidden { display: none !important; }
+
+        /* Decorative floating shapes */
+        .floating-shape {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+            top: 10%;
+            right: 5%;
+        }
+
+        .shape-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, transparent 70%);
+            bottom: 10%;
+            left: 5%;
+        }
+
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(217, 70, 239, 0.08) 0%, transparent 70%);
+            top: 50%;
+            left: 20%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <!-- SVG Gradient Definition for icons -->
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8b5cf6"/>
+                <stop offset="100%" style="stop-color:#ec4899"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <main>
+        <!-- Landing Section -->
+        <section class="hero" id="landingSection">
+            <div class="hero-content">
+                <div class="logo-header">
+                    <div class="logo">
+                        SK<sup>²</sup><span>AI Solutions</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 48px;">
+                    <p class="section-label">Free Assessment</p>
+                    <h1 class="hero-h1">AI Readiness Assessment</h1>
+                    <p class="subtitle">Discover where your organization stands on the AI adoption journey. Get a personalized readiness score across 5 critical dimensions.</p>
+
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <span>5 minutes</span>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11l3 3L22 4"/>
+                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                                </svg>
+                            </div>
+                            <span>15 questions</span>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20V10"/>
+                                    <path d="M18 20V4"/>
+                                    <path d="M6 20v-4"/>
+                                </svg>
+                            </div>
+                            <span>Instant results</span>
+                        </div>
+                    </div>
+
+                    <div class="email-form">
+                        <div class="form-card">
+                            <form id="emailForm">
+                                <label for="userEmail">Enter your email to begin</label>
+                                <div class="input-group">
+                                    <input type="email" id="userEmail" name="email" placeholder="you@company.com" required>
+                                    <button type="submit" class="btn btn-primary" style="width: 100%;">Start Assessment</button>
+                                </div>
+                                <p class="form-note">Your results will be sent to this email. We respect your privacy.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section class="assessment-container" id="assessmentSection">
+            <div class="assessment-wrapper">
+                <div class="assessment-logo">
+                    <div class="logo">
+                        SK<sup>²</sup><span>AI Solutions</span>
+                    </div>
+                </div>
+
+                <div class="assessment-card">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label" id="currentDimension">Strategy</span>
+                            <span class="progress-count"><span id="currentQuestion">1</span> of <span id="totalQuestions">15</span></span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 6.67%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="question-container" id="questionContainer">
+                        <!-- Questions will be dynamically inserted here -->
+                    </div>
+
+                    <div class="question-nav">
+                        <button class="btn-back" id="btnBack">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                            Back
+                        </button>
+                        <button class="btn btn-primary" id="btnNext" disabled>Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-container" id="resultsSection">
+            <div class="results-wrapper">
+                <div class="results-logo">
+                    <div class="logo">
+                        SK<sup>²</sup><span>AI Solutions</span>
+                    </div>
+                </div>
+
+                <div class="results-header fade-in">
+                    <p class="section-label">Your Results</p>
+                    <div class="overall-score">
+                        <span class="score-value" id="overallScore">0</span>
+                        <span class="score-label">out of 100</span>
+                    </div>
+                    <h2 class="section-h2">AI Readiness Score</h2>
+                    <p class="results-summary" id="resultsSummary">Loading your personalized analysis...</p>
+                </div>
+
+                <div class="dimension-scores fade-in">
+                    <h3>Score by Dimension</h3>
+                    <div class="dimension-row">
+                        <span class="dimension-name">Strategy</span>
+                        <div class="dimension-bar">
+                            <div class="dimension-fill strategy" id="barStrategy" style="width: 0%;"></div>
+                        </div>
+                        <span class="dimension-percent" id="scoreStrategy">0%</span>
+                    </div>
+                    <div class="dimension-row">
+                        <span class="dimension-name">Data</span>
+                        <div class="dimension-bar">
+                            <div class="dimension-fill data" id="barData" style="width: 0%;"></div>
+                        </div>
+                        <span class="dimension-percent" id="scoreData">0%</span>
+                    </div>
+                    <div class="dimension-row">
+                        <span class="dimension-name">Infrastructure</span>
+                        <div class="dimension-bar">
+                            <div class="dimension-fill infrastructure" id="barInfrastructure" style="width: 0%;"></div>
+                        </div>
+                        <span class="dimension-percent" id="scoreInfrastructure">0%</span>
+                    </div>
+                    <div class="dimension-row">
+                        <span class="dimension-name">People</span>
+                        <div class="dimension-bar">
+                            <div class="dimension-fill people" id="barPeople" style="width: 0%;"></div>
+                        </div>
+                        <span class="dimension-percent" id="scorePeople">0%</span>
+                    </div>
+                    <div class="dimension-row">
+                        <span class="dimension-name">Governance</span>
+                        <div class="dimension-bar">
+                            <div class="dimension-fill governance" id="barGovernance" style="width: 0%;"></div>
+                        </div>
+                        <span class="dimension-percent" id="scoreGovernance">0%</span>
+                    </div>
+                </div>
+
+                <div class="readiness-level fade-in">
+                    <h3>Your Readiness Level</h3>
+                    <p class="readiness-title" id="readinessTitle">Calculating...</p>
+                    <p class="readiness-desc" id="readinessDesc">Loading description...</p>
+                </div>
+
+                <div class="results-cta fade-in">
+                    <h3>Unlock Your Custom AI Roadmap</h3>
+                    <p>Ready to turn these insights into action? Discover how we help mid-market leaders build strategic AI foundations with financial governance.</p>
+                    <a href="https://l.industryrockstars.ch/widget/booking/288kGwRbqdRw5ldRot" class="btn btn-cta btn-large">Schedule Your Discovery Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Assessment Questions Data
+        const questions = [
+            // Strategy (3 questions)
+            {
+                dimension: 'Strategy',
+                text: 'Does your organization have a documented AI strategy aligned with business objectives?',
+                options: [
+                    { text: 'No AI strategy exists', score: 1 },
+                    { text: 'Informal discussions but nothing documented', score: 2 },
+                    { text: 'Basic AI strategy drafted but not widely communicated', score: 3 },
+                    { text: 'Comprehensive AI strategy aligned with business goals', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Strategy',
+                text: 'How does leadership view AI adoption within your organization?',
+                options: [
+                    { text: 'Leadership is skeptical or uninformed about AI', score: 1 },
+                    { text: 'Some interest but no active sponsorship', score: 2 },
+                    { text: 'Executive sponsor identified but limited involvement', score: 3 },
+                    { text: 'Strong executive championship with allocated resources', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Strategy',
+                text: 'Have you identified specific use cases where AI could deliver measurable ROI?',
+                options: [
+                    { text: 'No use cases identified', score: 1 },
+                    { text: 'General ideas but nothing specific or prioritized', score: 2 },
+                    { text: 'Several use cases identified with rough ROI estimates', score: 3 },
+                    { text: 'Prioritized use cases with detailed business cases', score: 4 }
+                ]
+            },
+            // Data (3 questions)
+            {
+                dimension: 'Data',
+                text: 'How would you describe the quality of your organization\'s data?',
+                options: [
+                    { text: 'Data is scattered, inconsistent, and poorly documented', score: 1 },
+                    { text: 'Some data is organized but quality varies significantly', score: 2 },
+                    { text: 'Most data is clean and documented but silos exist', score: 3 },
+                    { text: 'High-quality, well-governed data across the organization', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Data',
+                text: 'Can your teams easily access the data they need for analysis?',
+                options: [
+                    { text: 'Data access is very difficult and requires IT involvement', score: 1 },
+                    { text: 'Some data is accessible but much remains locked away', score: 2 },
+                    { text: 'Most business data is accessible through proper channels', score: 3 },
+                    { text: 'Self-service data access with appropriate controls', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Data',
+                text: 'Does your organization have data governance policies in place?',
+                options: [
+                    { text: 'No formal data governance exists', score: 1 },
+                    { text: 'Basic policies exist but are not consistently followed', score: 2 },
+                    { text: 'Data governance program in place for key data assets', score: 3 },
+                    { text: 'Mature data governance with clear ownership and standards', score: 4 }
+                ]
+            },
+            // Infrastructure (3 questions)
+            {
+                dimension: 'Infrastructure',
+                text: 'What is your current cloud infrastructure status?',
+                options: [
+                    { text: 'Primarily on-premises with no cloud strategy', score: 1 },
+                    { text: 'Beginning cloud migration with limited adoption', score: 2 },
+                    { text: 'Significant cloud presence with hybrid architecture', score: 3 },
+                    { text: 'Cloud-first strategy with scalable infrastructure', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Infrastructure',
+                text: 'Does your organization have the computing resources needed for AI workloads?',
+                options: [
+                    { text: 'No dedicated resources for AI/ML workloads', score: 1 },
+                    { text: 'Limited resources that would need significant upgrades', score: 2 },
+                    { text: 'Adequate resources for pilot projects', score: 3 },
+                    { text: 'Scalable compute resources ready for production AI', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Infrastructure',
+                text: 'How mature are your data integration and pipeline capabilities?',
+                options: [
+                    { text: 'Manual data transfers with no automated pipelines', score: 1 },
+                    { text: 'Some basic ETL processes but limited automation', score: 2 },
+                    { text: 'Automated pipelines for key data flows', score: 3 },
+                    { text: 'Modern data platform with real-time integration', score: 4 }
+                ]
+            },
+            // People (3 questions)
+            {
+                dimension: 'People',
+                text: 'What AI/ML skills exist within your organization today?',
+                options: [
+                    { text: 'No dedicated AI/ML skills in-house', score: 1 },
+                    { text: 'A few individuals with basic data science skills', score: 2 },
+                    { text: 'Small team with AI/ML experience on specific projects', score: 3 },
+                    { text: 'Established AI/ML team with diverse skill sets', score: 4 }
+                ]
+            },
+            {
+                dimension: 'People',
+                text: 'How would you describe your workforce\'s general comfort with new technology?',
+                options: [
+                    { text: 'Significant resistance to change and new tools', score: 1 },
+                    { text: 'Mixed reception with pockets of early adopters', score: 2 },
+                    { text: 'Generally open to change with proper training', score: 3 },
+                    { text: 'Culture of innovation and continuous learning', score: 4 }
+                ]
+            },
+            {
+                dimension: 'People',
+                text: 'Does your organization have a plan for AI-related training and upskilling?',
+                options: [
+                    { text: 'No training programs related to AI exist', score: 1 },
+                    { text: 'Ad-hoc training for interested individuals only', score: 2 },
+                    { text: 'Formal training available for technical roles', score: 3 },
+                    { text: 'Comprehensive AI literacy program across the organization', score: 4 }
+                ]
+            },
+            // Governance (3 questions)
+            {
+                dimension: 'Governance',
+                text: 'Does your organization have policies for responsible AI use?',
+                options: [
+                    { text: 'No AI-specific policies exist', score: 1 },
+                    { text: 'General awareness but no formal policies', score: 2 },
+                    { text: 'Basic AI ethics guidelines drafted', score: 3 },
+                    { text: 'Comprehensive responsible AI framework in place', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Governance',
+                text: 'How does your organization approach AI-related risk management?',
+                options: [
+                    { text: 'AI risks have not been formally considered', score: 1 },
+                    { text: 'Informal discussions but no risk framework', score: 2 },
+                    { text: 'AI risks included in general risk assessments', score: 3 },
+                    { text: 'Dedicated AI risk management with regular reviews', score: 4 }
+                ]
+            },
+            {
+                dimension: 'Governance',
+                text: 'Is there clear accountability for AI initiatives in your organization?',
+                options: [
+                    { text: 'No clear ownership or accountability', score: 1 },
+                    { text: 'IT owns AI by default with limited business input', score: 2 },
+                    { text: 'Shared ownership between IT and business units', score: 3 },
+                    { text: 'Clear governance structure with defined roles', score: 4 }
+                ]
+            }
+        ];
+
+        // State
+        let currentQuestionIndex = 0;
+        let answers = [];
+        let userEmail = '';
+
+        // DOM Elements
+        const landingSection = document.getElementById('landingSection');
+        const assessmentSection = document.getElementById('assessmentSection');
+        const resultsSection = document.getElementById('resultsSection');
+        const emailForm = document.getElementById('emailForm');
+        const questionContainer = document.getElementById('questionContainer');
+        const progressFill = document.getElementById('progressFill');
+        const currentQuestionEl = document.getElementById('currentQuestion');
+        const currentDimensionEl = document.getElementById('currentDimension');
+        const btnBack = document.getElementById('btnBack');
+        const btnNext = document.getElementById('btnNext');
+
+        // Initialize
+        function init() {
+            emailForm.addEventListener('submit', handleEmailSubmit);
+            btnBack.addEventListener('click', handleBack);
+            btnNext.addEventListener('click', handleNext);
+            updateBackButton();
+        }
+
+        function handleEmailSubmit(e) {
+            e.preventDefault();
+            userEmail = document.getElementById('userEmail').value;
+
+            if (validateEmail(userEmail)) {
+                showAssessment();
+            }
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showAssessment() {
+            landingSection.classList.add('hidden');
+            assessmentSection.classList.add('active');
+            renderQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderQuestion() {
+            const question = questions[currentQuestionIndex];
+            const selectedAnswer = answers[currentQuestionIndex];
+
+            questionContainer.innerHTML = `
+                <div class="fade-in">
+                    <span class="dimension-badge">${question.dimension}</span>
+                    <h2 class="question-text">${question.text}</h2>
+                    <div class="options-list">
+                        ${question.options.map((option, index) => `
+                            <button class="option-btn ${selectedAnswer === index ? 'selected' : ''}"
+                                    data-index="${index}"
+                                    data-score="${option.score}">
+                                ${option.text}
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Add click handlers to options
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.addEventListener('click', () => handleOptionSelect(btn));
+            });
+
+            // Update progress
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressFill.style.width = `${progress}%`;
+            currentQuestionEl.textContent = currentQuestionIndex + 1;
+            currentDimensionEl.textContent = question.dimension;
+
+            // Update navigation
+            updateBackButton();
+            updateNextButton();
+        }
+
+        function handleOptionSelect(btn) {
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            answers[currentQuestionIndex] = parseInt(btn.dataset.index);
+            updateNextButton();
+        }
+
+        function updateBackButton() {
+            btnBack.style.visibility = currentQuestionIndex === 0 ? 'hidden' : 'visible';
+        }
+
+        function updateNextButton() {
+            const hasAnswer = answers[currentQuestionIndex] !== undefined;
+            btnNext.disabled = !hasAnswer;
+            btnNext.textContent = currentQuestionIndex === questions.length - 1 ? 'See Results' : 'Next Question';
+        }
+
+        function handleBack() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        function handleNext() {
+            if (answers[currentQuestionIndex] === undefined) return;
+
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function calculateScores() {
+            const dimensions = {
+                'Strategy': { total: 0, count: 0 },
+                'Data': { total: 0, count: 0 },
+                'Infrastructure': { total: 0, count: 0 },
+                'People': { total: 0, count: 0 },
+                'Governance': { total: 0, count: 0 }
+            };
+
+            questions.forEach((question, index) => {
+                const answerIndex = answers[index];
+                if (answerIndex !== undefined) {
+                    const score = question.options[answerIndex].score;
+                    dimensions[question.dimension].total += score;
+                    dimensions[question.dimension].count++;
+                }
+            });
+
+            const scores = {};
+            let overallTotal = 0;
+            let overallCount = 0;
+
+            for (const [dim, data] of Object.entries(dimensions)) {
+                const percentage = Math.round((data.total / (data.count * 4)) * 100);
+                scores[dim.toLowerCase()] = percentage;
+                overallTotal += data.total;
+                overallCount += data.count;
+            }
+
+            scores.overall = Math.round((overallTotal / (overallCount * 4)) * 100);
+
+            return scores;
+        }
+
+        function getReadinessLevel(score) {
+            if (score >= 80) {
+                return {
+                    title: 'AI Ready',
+                    desc: 'Your organization has strong foundations for AI adoption. Focus on selecting the right use cases and maintaining momentum.'
+                };
+            } else if (score >= 60) {
+                return {
+                    title: 'Advancing',
+                    desc: 'You have good building blocks in place. Address key gaps in your weakest dimensions to accelerate your AI journey.'
+                };
+            } else if (score >= 40) {
+                return {
+                    title: 'Developing',
+                    desc: 'Your organization is building capabilities. Focus on strengthening fundamentals before pursuing complex AI initiatives.'
+                };
+            } else {
+                return {
+                    title: 'Early Stage',
+                    desc: 'You\'re at the beginning of your AI journey. Start with foundational work in data, skills, and strategy before investing in AI tools.'
+                };
+            }
+        }
+
+        function showResults() {
+            const scores = calculateScores();
+            const readiness = getReadinessLevel(scores.overall);
+
+            assessmentSection.classList.remove('active');
+            resultsSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Animate scores
+            setTimeout(() => {
+                document.getElementById('overallScore').textContent = scores.overall;
+
+                document.getElementById('barStrategy').style.width = `${scores.strategy}%`;
+                document.getElementById('scoreStrategy').textContent = `${scores.strategy}%`;
+
+                document.getElementById('barData').style.width = `${scores.data}%`;
+                document.getElementById('scoreData').textContent = `${scores.data}%`;
+
+                document.getElementById('barInfrastructure').style.width = `${scores.infrastructure}%`;
+                document.getElementById('scoreInfrastructure').textContent = `${scores.infrastructure}%`;
+
+                document.getElementById('barPeople').style.width = `${scores.people}%`;
+                document.getElementById('scorePeople').textContent = `${scores.people}%`;
+
+                document.getElementById('barGovernance').style.width = `${scores.governance}%`;
+                document.getElementById('scoreGovernance').textContent = `${scores.governance}%`;
+
+                document.getElementById('readinessTitle').textContent = readiness.title;
+                document.getElementById('readinessDesc').textContent = readiness.desc;
+
+                // Update summary based on lowest score
+                const lowestDim = Object.entries(scores)
+                    .filter(([key]) => key !== 'overall')
+                    .sort((a, b) => a[1] - b[1])[0][0];
+
+                document.getElementById('resultsSummary').textContent =
+                    `Based on your responses, your organization shows the most opportunity for improvement in ${lowestDim.charAt(0).toUpperCase() + lowestDim.slice(1)}. A focused strategy here could significantly accelerate your AI readiness.`;
+
+            }, 300);
+
+            // Send to webhook
+            sendToWebhook(scores);
+        }
+
+        async function sendToWebhook(scores) {
+            // Placeholder webhook URL - replace with your GHL webhook URL
+            const WEBHOOK_URL = 'YOUR_GHL_WEBHOOK_URL_HERE';
+
+            const payload = {
+                email: userEmail,
+                timestamp: new Date().toISOString(),
+                scores: {
+                    overall: scores.overall,
+                    strategy: scores.strategy,
+                    data: scores.data,
+                    infrastructure: scores.infrastructure,
+                    people: scores.people,
+                    governance: scores.governance
+                },
+                readinessLevel: getReadinessLevel(scores.overall).title,
+                answers: questions.map((q, i) => ({
+                    dimension: q.dimension,
+                    question: q.text,
+                    answer: q.options[answers[i]]?.text || 'Not answered',
+                    score: q.options[answers[i]]?.score || 0
+                }))
+            };
+
+            try {
+                // Only send if webhook URL is configured
+                if (WEBHOOK_URL !== 'YOUR_GHL_WEBHOOK_URL_HERE') {
+                    await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    console.log('Results sent to webhook successfully');
+                } else {
+                    console.log('Webhook URL not configured. Payload:', payload);
+                }
+            } catch (error) {
+                console.error('Error sending to webhook:', error);
+            }
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>

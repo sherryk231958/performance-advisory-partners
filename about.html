@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Sherry K. Kotvis, MS CAIO - Founder of SK² AI Solutions, LLC. Strategy-first AI adoption for mid-market businesses with financial governance.">
+    <meta property="og:title" content="About | SK² AI Solutions, LLC">
+    <meta property="og:description" content="Meet Sherry K. Kotvis, Certified Chief AI Officer. Strategy-first AI adoption for mid-market leadership.">
+    <meta property="og:type" content="website">
+    <title>About | SK² AI Solutions, LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        /* GHL Embed Fix - Only target GHL wrapper elements */
+        :host, :root, html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: 100vw !important;
+            width: 100% !important;
+            overflow-x: hidden;
+        }
+        /* Target GHL-specific wrapper classes */
+        [class*="hl-"], [class*="c-wrapper"], [class*="c-container"],
+        [id*="preview"], [class*="preview"] {
+            max-width: 100vw !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        /* Ensure page containers have proper padding */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        :root {
+            --navy: #0F2747;
+            --navy-deep: #0a1c38;
+            --navy-surface: #122a4e;
+            --slate: #6F7F94;
+            --slate-light: #94a3b8;
+            --white: #FFFFFF;
+            --text-body: #c8d1dc;
+            --teal: #008B8F;
+            --teal-bright: #00d4db;
+            --teal-glow: rgba(0, 212, 219, 0.15);
+            --violet: #CA4BFF;
+            --gradient-hero: linear-gradient(135deg, #0a1c38 0%, #0F2747 40%, #122a4e 100%);
+            --gradient-teal: linear-gradient(135deg, #008B8F 0%, #00d4db 100%);
+            --gradient-vibrant: linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #ec4899 100%);
+            --bg-light: #f0f2f5;
+            --bg-white: #FFFFFF;
+            --text-dark: #0F2747;
+            --text-dark-body: #3a4a5e;
+            --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+            --radius: 12px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-body);
+            background-color: var(--navy-deep);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero-h1 {
+            font-weight: 800;
+            font-size: clamp(36px, 5vw, 64px);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #FFFFFF 30%, #00d4db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .section-h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-h2-dark {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #FFFFFF 30%, #00d4db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            color: var(--teal-bright);
+            margin-bottom: 16px;
+        }
+
+        .section-label-dark { color: var(--teal); }
+
+        a {
+            color: var(--teal-bright);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section { padding: 100px 0; }
+
+        .bg-dark {
+            background: var(--gradient-hero);
+            position: relative;
+        }
+
+        .bg-light { background: var(--bg-light); }
+        .bg-white { background: var(--bg-white); }
+        .bg-navy-deep { background: var(--navy-deep); }
+
+        .text-center { text-align: center; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 28, 56, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            height: 72px;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(10, 28, 56, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--white);
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+        }
+
+        .logo sup { color: var(--teal-bright); font-size: 14px; }
+        .logo span { font-weight: 500; margin-left: 6px; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover { color: var(--teal-bright); }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--teal-bright);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border-radius: var(--radius-full);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-vibrant);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(217, 70, 239, 0.5);
+            color: var(--white);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(0, 212, 219, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(202, 75, 255, 0.06) 0%, transparent 50%);
+            animation: meshMove 20s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 48px 48px;
+            z-index: 0;
+        }
+
+        @keyframes meshMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(1%, -1%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            color: var(--text-body);
+        }
+
+        /* Bio Section */
+        .bio-section { padding: 120px 0; }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .bio-image {
+            position: relative;
+        }
+
+        .placeholder-img {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #d0d5dc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--slate);
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s ease;
+        }
+
+        .placeholder-img:hover {
+            box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 212, 219, 0.15);
+        }
+
+        .placeholder-img svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+            opacity: 0.4;
+        }
+
+        .bio-image .placeholder-img {
+            width: 100%;
+            height: 480px;
+        }
+
+        .bio-content .founder-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--teal);
+            margin-bottom: 20px;
+        }
+
+        .bio-content p {
+            color: var(--text-dark-body);
+            font-size: 17px;
+            max-width: 560px;
+        }
+
+        .bio-quote {
+            margin-top: 32px;
+            padding-left: 24px;
+            border-left: 3px solid var(--teal);
+        }
+
+        .bio-quote p {
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 18px;
+        }
+
+        /* Credentials */
+        .credentials-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .credentials-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 48px 0 32px;
+        }
+
+        .credential-badge {
+            height: 120px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            object-fit: contain;
+            background: var(--white);
+        }
+
+        .credential-badge.square {
+            width: 120px;
+        }
+
+        .credential-badge.rectangular {
+            width: 200px;
+        }
+
+        .credentials-text {
+            color: var(--text-dark-body);
+            font-size: 16px;
+        }
+
+        /* Mission */
+        .mission-section { padding: 120px 0; }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .mission-content p {
+            color: var(--text-dark-body);
+            font-size: 17px;
+        }
+
+        .mission-content .sub-tagline {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--teal);
+            margin-top: 24px;
+        }
+
+        .mission-visual .placeholder-img {
+            width: 100%;
+            height: 280px;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 219, 0.3), transparent);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-deep);
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 219, 0.3), transparent);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .footer-logo sup { color: var(--teal-bright); }
+
+        .footer .sub-tagline {
+            color: var(--teal-bright);
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer p {
+            color: var(--text-body);
+            font-size: 15px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: var(--text-body);
+            font-size: 15px;
+        }
+        .footer-links a:hover { color: var(--teal-bright); }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .footer-contact svg {
+            width: 18px;
+            height: 18px;
+            color: var(--teal-bright);
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 32px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--slate-light);
+            font-size: 14px;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .bio-grid, .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .bio-image { max-width: 400px; margin: 0 auto; }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-contact p { justify-content: center; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(10, 28, 56, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active { right: 0; }
+            .mobile-toggle { display: flex; }
+
+            .bio-image .placeholder-img { height: 350px; }
+
+            .credentials-grid { gap: 24px; }
+            .credential-badge { width: 100px; height: 100px; }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 16px;
+            background: var(--teal);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            z-index: 9999;
+            transition: top 0.3s ease;
+        }
+
+        .skip-link:focus { top: 16px; }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="/home" class="logo" aria-label="SK² AI Solutions, LLC Home">
+                SK<sup>²</sup><span>AI Solutions, LLC</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about" class="active">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/speaking">Speaking</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero bg-dark">
+            <div class="hero-content">
+                <p class="section-label fade-up">About Us</p>
+                <h1 class="hero-h1 fade-up">Strategy-First AI Adoption</h1>
+                <p class="subtitle fade-up">Founded 2024 | Mesa, AZ | Serving Maricopa County</p>
+            </div>
+        </section>
+
+        <!-- Founder Bio -->
+        <section class="bio-section bg-white">
+            <div class="container">
+                <div class="bio-grid">
+                    <div class="bio-image fade-up">
+                        <img src="https://storage.googleapis.com/msgsndr/XRYqSjEiYT0xqiZEbtwu/media/694ab4e6aaebe812c1fcf408.jpg" alt="Sherry K. Kotvis, MS CAIO - Founder of SK² AI Solutions" style="width: 100%; height: 480px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    </div>
+                    <div class="bio-content fade-up">
+                        <p class="section-label section-label-dark">Meet the Founder</p>
+                        <h2 class="section-h2">Sherry K. Kotvis, MS CAIO</h2>
+                        <p class="founder-title">Certified Chief AI Officer</p>
+                        <p>As a Certified Chief AI Officer (CAIO), I help mid-market leaders adopt AI with strategy-first execution—starting with a roadmap, governance, and measurable outcomes before selecting tools. The result: practical AI that improves productivity, reduces risk, and delivers ROI your team can sustain.</p>
+                        <div class="bio-quote">
+                            <p>"When AI fails, it's rarely the tech. It's the missing roadmap."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials -->
+        <section class="credentials-section bg-light">
+            <div class="container">
+                <p class="section-label section-label-dark fade-up">Credentials</p>
+                <h2 class="section-h2 fade-up">Trusted Expertise</h2>
+                <div class="credentials-grid">
+                    <img src="https://storage.googleapis.com/msgsndr/XRYqSjEiYT0xqiZEbtwu/media/694455410190af2e4acae5d6.png" alt="Certification credential" class="credential-badge square fade-up">
+                    <img src="https://storage.googleapis.com/msgsndr/XRYqSjEiYT0xqiZEbtwu/media/6944556baca6ab95396c7c12.png" alt="Certification credential" class="credential-badge rectangular fade-up">
+                    <img src="https://storage.googleapis.com/msgsndr/XRYqSjEiYT0xqiZEbtwu/media/69447ef75b256b1427bd758a.png" alt="Certification credential" class="credential-badge square fade-up">
+                </div>
+                <p class="credentials-text fade-up">Certified Chief AI Officer (CAIO) | Master of Science</p>
+            </div>
+        </section>
+
+        <!-- Mission -->
+        <section class="mission-section bg-white">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content fade-up">
+                        <p class="section-label section-label-dark">Our Mission</p>
+                        <h2 class="section-h2">AI Investment Decisions with Financial Governance</h2>
+                        <p>SK² AI Solutions, LLC helps mid-market leaders make AI investment decisions with financial governance—so budgets, risk controls, and accountability are built in from day one.</p>
+                        <p class="sub-tagline">Human Insight – AI Empowered</p>
+                    </div>
+                    <div class="mission-visual fade-up">
+                        <img src="https://storage.googleapis.com/msgsndr/XRYqSjEiYT0xqiZEbtwu/media/698f8e860084981041503ceb.jpg" alt="AI Strategy and Financial Governance" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner bg-navy-deep">
+            <div class="container">
+                <h2 class="section-h2-dark fade-up">Ready to Build Your AI Roadmap?</h2>
+                <a href="/services" class="btn btn-primary fade-up">View Our Services</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-logo">SK<sup>²</sup> AI Solutions, LLC</p>
+                    <p class="sub-tagline">Human Insight – AI Empowered</p>
+                    <p>Vendor-neutral AI strategy for mid-market businesses. We deliver decision-grade blueprints with financial governance.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/speaking">Speaking & Training</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Maricopa County, AZ
+                    </p>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        Mon – Fri, 8am – 5pm MST
+                    </p>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                        www.Sk2AISolutions.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024–2025 SK² AI Solutions, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        mobileToggle.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') mobileToggle.click();
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), index * 120);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
