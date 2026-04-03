@@ -1,4 +1,4 @@
-# SK² AI Solutions — Go High Level Deployment Guide
+# Performance Advisory Partners — Go High Level Deployment Guide
 
 ## Overview
 5 self-contained premium HTML pages with all CSS/JS inline. Ready for Go High Level.
@@ -8,7 +8,7 @@
 ### Step 1: Create a Website in GHL
 1. Log into GHL → **Sites** → **Websites** → **+ New Website**
 2. Choose **"Blank Template"**
-3. Name it "SK² AI Solutions"
+3. Name it "Performance Advisory Partners"
 
 ### Step 2: Add Pages
 Create 5 pages with these paths:
@@ -29,7 +29,7 @@ For each page:
 7. Click Save
 
 ### Step 4: Connect Your Domain
-1. **Settings** → **Domains** → Add `sk2aisolutions.com`
+1. **Settings** → **Domains** → Add `PerformanceAdvisoryPartners.com`
 2. Follow GHL's DNS setup instructions
 3. Point your domain to GHL's servers
 
@@ -253,14 +253,14 @@ To send leads into your GHL CRM automatically:
 
 ### Step 4: Set Up Your Social Media Link
 Use this URL in all social media posts:
-- `https://sk2aisolutions.com/assessment`
-- Or use a short link service to create something like `sk2ai.com/ready`
+- `https://PerformanceAdvisoryPartners.com/assessment`
+- Or use a short link service to create something like `PerformanceAdvisoryPartners.com/ready`
 
 ### Step 5: Connect Results CTAs to Main Site
 In the assessment.html code, find the CTA buttons in the results section.
 Update the href values to point to your live site:
-- Discovery Call button → `https://sk2aisolutions.com/contact`
-- Services button → `https://sk2aisolutions.com/services`
+- Discovery Call button → `https://PerformanceAdvisoryPartners.com/contact`
+- Services button → `https://PerformanceAdvisoryPartners.com/services`
 
 ### Step 6: Test the Full Flow
 - [ ] Landing page loads with hero + lead capture form
@@ -274,4 +274,4 @@ Update the href values to point to your live site:
 
 ---
 
-© 2024–2025 SK² AI Solutions, LLC. All rights reserved.
+© 2024–2025 Performance Advisory Partners. All rights reserved.
